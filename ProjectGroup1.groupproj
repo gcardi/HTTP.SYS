@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{0AC26E37-0A1F-411F-AD77-F4E82E14E432}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="TestHttpSys.cbproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Pkg\PkgHttpSysBridge.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="TestHttpSys">
+        <MSBuild Projects="TestHttpSys.cbproj"/>
+    </Target>
+    <Target Name="TestHttpSys:Clean">
+        <MSBuild Projects="TestHttpSys.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TestHttpSys:Make">
+        <MSBuild Projects="TestHttpSys.cbproj" Targets="Make"/>
+    </Target>
+    <Target Name="PkgHttpSysBridge">
+        <MSBuild Projects="Pkg\PkgHttpSysBridge.dproj"/>
+    </Target>
+    <Target Name="PkgHttpSysBridge:Clean">
+        <MSBuild Projects="Pkg\PkgHttpSysBridge.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PkgHttpSysBridge:Make">
+        <MSBuild Projects="Pkg\PkgHttpSysBridge.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="TestHttpSys;PkgHttpSysBridge"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="TestHttpSys:Clean;PkgHttpSysBridge:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="TestHttpSys:Make;PkgHttpSysBridge:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
