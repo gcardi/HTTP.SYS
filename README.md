@@ -6,15 +6,20 @@ Usa: https://github.com/gcardi/modified_mORMot.git
 ## Da fare la prima volta di eseguire il programma
 
 ### Ci si ricordi di fare il Binding
+
 Esempio: 
 ```shell
 netsh http add sslcert ipport=0.0.0.0:{PORTA} certhash={HASH-CERTIFICATO} appid={GUID}
 ```
+
 HASH-CERTIFICATO: Bisogna prendere quello nel cert store
+
 GUID: È possibile utilizzare qualsiasi GUID valido. Viene utilizzato solo per consentire di identificare l'associazione in un secondo momento.
+
 PORTA: Deve essere la stessa del binding del certificato (si veda sotto)
 
 ### Lanciare l'eseguibile almeno la prima volta come admin
+
 Oppure digitare, ad esempio:
 
 ```shell
