@@ -7,7 +7,9 @@ Usa: https://github.com/gcardi/modified_mORMot.git
 
 ### Ci si ricordi di fare il Binding
 Esempio: 
+```shell
 netsh http add sslcert ipport=0.0.0.0:{PORTA} certhash={HASH-CERTIFICATO} appid={UN GUID CHE NON COMPRENDO MA SERVE}
+```
 
 ### Lanciare l'eseguibile almeno la prima volta come admin
 Oppure digitare, ad esempio:
