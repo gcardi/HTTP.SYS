@@ -34,8 +34,13 @@ requires
 contains
   SynWebServer in 'SynWebServer.pas',
   SynWebReqRes in 'SynWebReqRes.pas',
+  SynZip in 'SynZip.pas',
+  SynCrtSock in 'SynCrtSock.pas',
+  SynWinSock in 'SynWinSock.pas',
+  SynCommons in 'SynCommons.pas',
+  SynLZ in  'SynLZ.pas',
   SynWebEnv in 'SynWebEnv.pas';
-
 end.
+
 
 
