@@ -12,7 +12,7 @@ Esempio:
 netsh http add sslcert ipport=0.0.0.0:{PORTA} certhash={HASH-CERTIFICATO} appid={GUID}
 ```
 
-HASH-CERTIFICATO: Bisogna prendere quello nel cert store
+HASH-CERTIFICATO: Bisogna prendere quello nel cert store (https://docs.microsoft.com/it-IT/dotnet/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate)
 
 GUID: È possibile utilizzare qualsiasi GUID valido. Viene utilizzato solo per consentire di identificare l'associazione in un secondo momento.
 
