@@ -18,6 +18,8 @@ GUID: È possibile utilizzare qualsiasi GUID valido. Viene utilizzato solo per c
 
 PORTA: Deve essere la stessa del binding del certificato (si veda sotto)
 
+Esempio: netsh http add sslcert ipport=0.0.0.0:18443 certhash=59ce83fa90fcc82538e0b532ef215284468d489f appid={8573a413-97b0-41de-a3a9-3787612050ed}
+
 ### Lanciare l'eseguibile almeno la prima volta come admin
 
 Oppure digitare, ad esempio:
