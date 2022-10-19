@@ -9,6 +9,7 @@
 //---------------------------------------------------------------------------
 USEFORM("WebModuleUnit1.cpp", WebModule1); /* TWebModule: File Type */
 USEFORM("FormMain.cpp", Form1);
+USEFORM("ServerMethodsUnit1.cpp", ServerMethods1); /* TDataModule: File Type */
 //---------------------------------------------------------------------------
 extern PACKAGE TComponentClass WebModuleClass;
 int WINAPI _tWinMain(HINSTANCE, HINSTANCE, LPTSTR, int)
@@ -21,7 +22,7 @@ int WINAPI _tWinMain(HINSTANCE, HINSTANCE, LPTSTR, int)
     }
     Application->Initialize();
     Application->CreateForm(__classid(TForm1), &Form1);
-         Application->Run();
+		Application->Run();
   }
   catch (Exception &exception)
   {
