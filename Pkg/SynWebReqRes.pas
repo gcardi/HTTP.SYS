@@ -79,7 +79,7 @@ type
     FEnv: TSynWebEnv;
     function GetStringVariable(Index: Integer): WBString; override;
     function GetDateVariable(Index: Integer): TDateTime; override;
-    function GetIntegerVariable(Index: Integer): Integer; override;
+    function GetIntegerVariable(Index: Integer): Int64; override;
     function GetInternalPathInfo: WBString; override;
     function GetInternalScriptName: WBString; override;
 {$IFDEF UNICODE}
@@ -119,8 +119,8 @@ type
       override;
     function GetDateVariable(Index: Integer): TDateTime; override;
     procedure SetDateVariable(Index: Integer; const Value: TDateTime); override;
-    function GetIntegerVariable(Index: Integer): Integer; override;
-    procedure SetIntegerVariable(Index: Integer; Value: Integer); override;
+    function GetIntegerVariable(Index: Integer): Int64; override;
+    procedure SetIntegerVariable(Index: Integer; Value: Int64); override;
     function GetContent: WBString; override;
     procedure SetContent(const Value: WBString); override;
     procedure SetContentStream(Value: TStream); override;
@@ -184,7 +184,7 @@ begin
   Result := '';
 end;
 
-function TSynWebRequest.GetIntegerVariable(Index: Integer): Integer;
+function TSynWebRequest.GetIntegerVariable(Index: Integer): Int64;
 begin
   if Index = cstInContentLength then
     Result := StrToIntDef(UTF8ToString(FEnv.GetHeader('CONTENT-LENGTH:')), 0)
@@ -329,7 +329,7 @@ begin
   Result:=TSynWebRequest(FHTTPRequest).Env;
 end;
 
-function TSynWebResponse.GetIntegerVariable(Index: Integer): Integer;
+function TSynWebResponse.GetIntegerVariable(Index: Integer): Int64;
 begin
   Result := 0;
 end;
@@ -383,7 +383,7 @@ begin
 
 end;
 
-procedure TSynWebResponse.SetIntegerVariable(Index, Value: Integer);
+procedure TSynWebResponse.SetIntegerVariable(Index: Integer; Value: Int64);
 begin
 
 end;

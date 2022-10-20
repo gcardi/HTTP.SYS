@@ -34,12 +34,13 @@ requires
 contains
   SynWebServer in 'SynWebServer.pas',
   SynWebReqRes in 'SynWebReqRes.pas',
-  SynZip in 'SynZip.pas',
-  SynCrtSock in 'SynCrtSock.pas',
-  SynWinSock in 'SynWinSock.pas',
-  SynCommons in 'SynCommons.pas',
-  SynLZ in  'SynLZ.pas',
-  SynWebEnv in 'SynWebEnv.pas';
+  SynWebEnv in 'SynWebEnv.pas',
+  SynCommons in 'modified_mORMot\SynCommons.pas',
+  SynCrtSock in 'modified_mORMot\SynCrtSock.pas',
+  SynLZ in 'modified_mORMot\SynLZ.pas',
+  SynWinSock in 'modified_mORMot\SynWinSock.pas',
+  SynZip in 'modified_mORMot\SynZip.pas';
+
 end.
 
 

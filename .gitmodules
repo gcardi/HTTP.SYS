@@ -1,0 +1,3 @@
+[submodule "Pkg/modified_mORMot"]
+	path = Pkg/modified_mORMot
+	url = https://github.com/gcardi/modified_mORMot.git

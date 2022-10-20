@@ -1,5 +1,4 @@
 object WebModule1: TWebModule1
-  OldCreateOrder = False
   OnCreate = WebModuleCreate
   Actions = <
     item
@@ -17,8 +16,8 @@ object WebModule1: TWebModule1
       OnAction = WebModule1DefaultHandlerAction
     end>
   BeforeDispatch = WebModuleBeforeDispatch
-  Height = 411
-  Width = 508
+  Height = 369
+  Width = 545
   object HTTPSoapDispatcher1: THTTPSoapDispatcher
     Dispatcher = HTTPSoapCppInvoker1
     WebDispatch.PathInfo = 'soap*'
@@ -33,6 +32,7 @@ object WebModule1: TWebModule1
   object WSDLHTMLPublish1: TWSDLHTMLPublish
     WebDispatch.MethodType = mtAny
     WebDispatch.PathInfo = 'wsdl*'
+    TargetNamespace = 'http://tempuri.org/'
     PublishOptions = [poPublishLocationAsSecure, poUTF8ContentType]
     Left = 60
     Top = 123

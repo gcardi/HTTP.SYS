@@ -10,11 +10,9 @@ object Form1: TForm1
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  OldCreateOrder = False
   DesignSize = (
     399
     235)
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 24
@@ -66,7 +64,7 @@ object Form1: TForm1
     Width = 121
     Height = 21
     TabOrder = 2
-    Text = '18443'
+    Text = '10443'
   end
   object ButtonOpenBrowser: TButton
     Left = 24
@@ -76,6 +74,7 @@ object Form1: TForm1
     Action = actOpenBrowser
     Anchors = [akLeft, akTop, akRight]
     TabOrder = 3
+    ExplicitWidth = 349
   end
   object EditRoot: TEdit
     Left = 24

@@ -10,7 +10,7 @@
 //---------------------------------------------------------------------------
 
 #pragma package(smart_init)
-#pragma classgroup "Vcl.Controls.TControl"
+#pragma classgroup "System.Classes.TPersistent"
 #pragma resource "*.dfm"
 
 TComponentClass WebModuleClass = __classid(TWebModule1);
@@ -97,10 +97,12 @@ void __fastcall TWebModule1::ServerFunctionInvokerHTMLTag(TObject *Sender, TTag 
 		ReplaceText = __classid(TServerMethods1)->ClassName();
 	else if (SameText(TagString, "loginrequired"))
 	{
+    /*
 		if (DSHTTPWebDispatcher1->AuthenticationManager != NULL)
 			ReplaceText = "true";
 		else
 			ReplaceText = "false";
+        */
 	}
 	else if (SameText(TagString, "serverfunctionsjs"))
 		ReplaceText = Request->InternalScriptName + "/js/serverfunctions.js";
