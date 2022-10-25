@@ -14,7 +14,7 @@ netsh http add sslcert ipport=0.0.0.0:{PORT} certhash={HASH-CERTIFICATE} appid={
 
 HASH-CERTIFICATE: you have to get the one in the cert store (https://docs.microsoft.com/it-IT/dotnet/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate)
 
-GUID: È possibile utilizzare qualsiasi GUID valido. Viene utilizzato solo per consentire di identificare l'associazione in un secondo momento.
+GUID: Any valid GUID can be used, as it will allow you to define the binding later.
 
 PORT: Must be the same as the certificate binding (see below)
 
@@ -42,3 +42,4 @@ If the ACL was entered, it should look something like this:
             Delega: Yes
             SDDL: D:(A;;GA;;;WD)
 ```
+
