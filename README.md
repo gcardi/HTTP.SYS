@@ -29,7 +29,6 @@ netsh http add urlacl url=https://+:10443/ user=Everyone listen=yes delegate=yes
 ```
 Then, to verify:
 
-Digitare 
 ```shell
 netsh http show urlacl 
 ```
